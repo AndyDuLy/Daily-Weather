@@ -1,27 +1,31 @@
 # daily-weather-cron
-Recurring weather alerts with Twilio SMS &amp; OpenWeather API, deployed serverless on GCloud Functions with a daily GCloud Pub/Sub cron job trigger.  
-  
-  
-===== Installation & Usage ======
-> Clone the repo  
-  
-> API Keys & Accounts:
-Sign up and acquire your own Twilio phone number at [https://www.twilio.com/sms]  
-Sign up and acquire your own OpenWeatherMap account and API key at [https://openweathermap.org/api/one-call-api]  
-Sign up and create a Google Cloud Platform project at [https://cloud.google.com/appengine/docs/standard/nodejs/building-app/creating-project]  
-  
-> Code:
-Throw the index.js into a GCloud Function to run the code serverless-ly at [https://cloud.google.com/functions]  
-Throw all your API and Auth keys into te GCloud Function's environment variables to keep them safe and secure  
-Create a Cloud Pub/Sub to trigger your GCloud Function at [https://cloud.google.com/pubsub/docs]  
-Create a Cloud Scheduler cron job to recurringly run your Pub/Sub trigger at an interval you specify at [https://cloud.google.com/scheduler]  
-If you need help with cron job expressions, check out [https://crontab.guru/]  
-  
-Once the GCloud Function is deployed and your Scheduler is active, the GCloud Function will continuously be triggered at the interval you set earlier!  
-You're now done the setup!  
-  
-** Index.js contents can be modified to extract different information than the bits I personally chose **  
-  
+Recurring weather alerts with Twilio SMS API, OpenWeatherMap API, deployed serverless on GCloud Functions with a daily GCloud Pub/Sub cron job trigger. <br/> 
+
+
+## Demo & How-To-Build
+
+The image below shows a sample text I receive every morning at 6:30am (EST). <br/>
+<img src="/RepoFiles/demo.png">
+
+If you're interested in learning how to build this project yourself, I actually wrote a Medium article on how to! Check it out here: https://link.medium.com/PQ2tGyP9g8 <br/>
+
+
+## Inspiration & Purpose
+
+Before COVID, I had an extremely consistent routine in the early mornings to go to the gym, and hated having to either hope I was dressed accordingly for the bipolar weather of that is Canada, or stand there and wait for the slow Weather Network app to load. If this sounds like a very 'first world problem', it's because it honestly is :) <br/>
+I really just wanted to be able to wakeup, glance at my phone's notification drawer, and see the relevant weather information for the day before heading out. <br/>
+At the time of writing this and when I first created this project, that level of customizability wasn't available in the weather network app or Google's discrete weather updates, so I just decided to build it myself. <br/>
+
+
+## Technical Stack
+
+If you've made it this far, surely you're interested in knowing a bit more about the underlying tools and technologies I used! <br/>
+
+Mini project was built entirely on Google Cloud Platform with additional APIs from Twilio SMS and OpenWeatherMap. <br/>
+Specifically Firebase's Realtime Database, and hosted through GCP's Cloud Hosting as the integration of everything was seamless. <br/>
+I went with GCP because I needed a couple cloud services/products, had previously used GCP, and the documentation was immensely detailed. The latter bit mattered the most for this project as it is a bit niche, and I found little help online to put the pieces together for this particular use case.
+
+<br/> <br/>
   
 ===== License ======
 
