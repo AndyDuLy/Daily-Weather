@@ -1,4 +1,4 @@
-# daily-weather-cron
+# Daily-Weather | Serverless SMS Cron Job
 Recurring weather alerts with Twilio SMS API, OpenWeatherMap API, deployed serverless on GCloud Functions with a daily GCloud Pub/Sub cron job trigger. <br/> 
 
 
